@@ -1,0 +1,146 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-image: url(https://images.pexels.com/photos/1111318/pexels-photo-1111318.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+header {
+	width: 100%;
+	background-color: #352f44;
+}
+
+.logo-image {
+	font-size: 3rem;
+	display: block;
+	color: lightgray;
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: auto;
+	min-height: 60px;
+	padding: 18px;
+}
+
+.nav-list {
+	align-items: center;
+	display: flex;
+	gap: 1.2rem;	
+}
+
+.nav-link {
+	color: whitesmoke;
+	padding: 7px 14px;
+}
+
+.nav-link:hover, .dropdown:hover .nav-link {
+	background-color: gray;
+}
+
+.dropdown-item:hover .dropdown-link {
+    background-color: lightgray;
+}
+
+.dropdown:hover .dropdown-link {
+	display: block;
+}
+
+.dropdown {
+	position: relative;
+	font-size: 14px;
+}
+
+.dropdown-list {
+	background-color: whitesmoke;
+	position: absolute;
+	left: 0;
+	top: 138%;
+	min-width: max-content;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dropdown-item .dropdown-link{
+	display: block;
+	display: none;
+	padding: 15px 25px;			
+	color: black;
+}
+
+.submenu {
+	position: relative;
+	font-size: 14px;
+}
+
+.submenu-link {
+	display: block;
+	display: none;
+	padding: 15px 25px;			
+	color: black;
+}
+
+.submenu-list {
+	background-color: whitesmoke;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	min-width: max-content;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.submenu:hover .submenu-link {
+	display: block;
+} 
+
+.submenu-item:hover {
+	background-color: lightgray;
+}
+
+.submenu-link:hover .dropdown-link{
+	background-color: lightgray;
+}
+
+
+@media (max-width: 620px) {
+	.header-content {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.nav a {
+		font-size: 1.1rem;
+	}
+
+	header {
+		min-width: 350px;
+		position: relative;
+	}
+
+	.dropdown {
+		position: initial;
+	}
+
+	.dropdown-list {
+		top: 100%;
+		width: 100%;
+		text-align: center;
+	}		
+
+}
+
